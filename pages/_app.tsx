@@ -28,20 +28,6 @@ import { color } from '@mui/system';
 const drawerWidth = 240;
 const settings = ['Profile', 'Logout'];
 
-const theme = createTheme({
-  components: {
-    MuiDrawer: {
-      styleOverrides: {
-        paper: {
-          backgroundColor: "#14171F",
-          boxSizing: "border-box",
-          width: drawerWidth
-        }
-      }
-    }
-  }
-});
-
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })<{
   open?: boolean;
 }>(({ theme, open }) => ({
@@ -222,7 +208,7 @@ export default function App({ Component, pageProps }: AppProps) {
                   <ListItemIcon>
                     <PeopleOutlineIcon sx={{ color: 'white' }}/>
                   </ListItemIcon>
-                  <Link href={'/home'} color='inherit' underline='none' variant='subtitle1'>Collectors</Link>
+                  <Link href={'/admin/users'} color='inherit' underline='none' variant='subtitle1'>Collectors</Link>
                 </ListItemButton>
               </ListItem>
               <ListItem disablePadding>
@@ -230,7 +216,7 @@ export default function App({ Component, pageProps }: AppProps) {
                   <ListItemIcon>
                     <StyleIcon sx={{ color: 'white' }}/>
                   </ListItemIcon>
-                  <Link href={'/releases'} color='inherit' underline='none' variant='subtitle1'>New Releases</Link>
+                  <Link href={'/admin/collections'} color='inherit' underline='none' variant='subtitle1'>Collections</Link>
                 </ListItemButton>
               </ListItem>
             </List>

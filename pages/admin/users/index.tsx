@@ -42,13 +42,13 @@ export default function Users() {
   ]
 
   return (
-    <Container>
+    <>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', paddingY: '2rem' }}>
         <Typography>Collectors</Typography>
         <Stack direction={'row'} spacing={1}>
           <TextField size="small" />
-          <SearchIcon />
-          <TuneIcon />
+          <SearchIcon fontSize="large" />
+          <TuneIcon fontSize="large" />
         </Stack>
       </Box>
       <TableContainer>
@@ -85,6 +85,6 @@ export default function Users() {
           </TableBody>
         </Table>
       </TableContainer>
-    </Container>
+    </>
   );
 }
