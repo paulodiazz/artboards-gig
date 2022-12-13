@@ -230,7 +230,7 @@ export default function App({ Component, pageProps }: AppProps) {
 						</ListItem>
 					</List>
 				</Drawer>
-				<Main open={open}>
+				<Main sx={{ background: 'radial-gradient(75.93% 75.93% at 13.92% 23.07%, #0056FF 0%, #FF3800 100%)' }} open={open}>
 					<DrawerHeader />
 					<Component {...pageProps} />
 				</Main>
